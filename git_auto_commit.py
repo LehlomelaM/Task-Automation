@@ -17,10 +17,10 @@ def push_to_remote_repository(folder_name, remote='origin', branch_name='main'):
     
 def auto_commit_changes(folder, remote, branch_name): 
     try:
-        os.chdir(folder)
-        subprocess.check_call(['git', 'add', '.'])
-        subprocess.check_call(['git', 'commit', '-m', f'auto commit msg {datetime.date.today()}'])
-        subprocess.check_call(['git', 'push', remote, branch_name])
+        # os.chdir(folder)
+        # subprocess.check_call(['git', 'add', '.'])
+        # subprocess.check_call(['git', 'commit', '-m', f'auto commit msg {datetime.date.today()}'])
+        subprocess.check_call(['./auto_commit.sh', folder])
     except subprocess.CalledProcessError as e:
         log_error('Error commiting code to remote repo', e)
 
