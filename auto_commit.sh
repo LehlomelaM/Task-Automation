@@ -1,6 +1,6 @@
 #!/bin/bash
 
-DATE=date
+DATE=$(date)
 
 if [ "$#" -eq 1 ]; then
     cd $1
