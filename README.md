@@ -1,4 +1,5 @@
 # Task Automation
+.bashrc -> PATH="$PATH:$HOME/Documents/bin"
 
 This project is a work in progress (WIP) aimed at developing custom scripts to automate repetitive tasks in my daily workflow. Currently, the focus is on identifying areas for automation to enhance my productivity.  The scripts will be continuously refined and expanded based on evolving needs and process improvements.
 
