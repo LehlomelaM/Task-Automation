@@ -1,5 +1,6 @@
 #!/bin/bash
- 
+echo daily run $(date)
+
 SCRIPTS_HOME='/home/lehlomela/Documents/bin/'
 NOTES='/home/lehlomela/Documents/notes'
 
