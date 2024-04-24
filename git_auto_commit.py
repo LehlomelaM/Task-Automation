@@ -7,19 +7,16 @@ import datetime
 
 log_file = '/home/lehlomela/Desktop/error.log'
 
-def push_to_remote_repository(folder_name, remote='origin', branch_name='main'): 
-    log_error(f'pushing folder {folder_name}')
+def push_to_remote_repository(folder_name): 
+    log_error(folder_name)
     try: # check if git repository
         subprocess.check_output(["git", "-C", folder_name, "rev-parse"], stderr=subprocess.DEVNULL)
-        auto_commit_changes(folder_name, remote, branch_name)
+        auto_commit_changes(folder_name)
     except subprocess.CalledProcessError as ex:
         log_error(f'folder {folder_name} not a git repository \n error:', ex)
     
-def auto_commit_changes(folder, remote, branch_name): 
+def auto_commit_changes(folder): 
     try:
-        # os.chdir(folder)
-        # subprocess.check_call(['git', 'add', '.'])
-        # subprocess.check_call(['git', 'commit', '-m', f'auto commit msg {datetime.date.today()}'])
         subprocess.check_output(['./auto_commit.sh', folder])
     except subprocess.CalledProcessError as e:
         log_error('Error commiting code to remote repo', e)
