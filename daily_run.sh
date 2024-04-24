@@ -3,13 +3,11 @@
 SCRIPTS_HOME='/home/lehlomela/Documents/bin/'
 NOTES='/home/lehlomela/Documents/notes'
 
-pwd >> ~/Desktop/somefile.file
 cd $SCRIPTS_HOME
 
 # back up scripts
 ./auto_commit.sh .
 
-echo "backing up notes folder"
 cd $NOTES
 
 # run python script
