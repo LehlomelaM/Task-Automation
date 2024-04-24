@@ -1,5 +1,5 @@
 #!/bin/bash
-echo -e "\n\n running daily tasks $(date)"
+echo -e "\n\nRunning daily tasks $(date)"
 
 SCRIPTS_HOME='/home/lehlomela/Documents/bin/'
 NOTES='/home/lehlomela/Documents/notes'
