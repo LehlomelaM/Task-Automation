@@ -19,6 +19,7 @@ def move_file_to_directory(file_path, file_dir):
 def search_files_for_tags(dir):
     pattern = re.compile(r'^\s*tags:\s*\[(.*)\]\s*$') # Notable
 
+    os.chdir(dir)
     for filename in os.listdir(dir):
         
         if os.path.isfile(filename) and filename.endswith('.md'): # select markdown files
@@ -35,10 +36,9 @@ def search_files_for_tags(dir):
     if(os.path.exists(destination_folder)):
         shutil.rmtree(destination_folder)
     shutil.copytree(f'{dir}/images', destination_folder)
-
+    
 if __name__ == '__main__':
     if len(sys.argv) != 2:
         print("usage move_files_to_folders.py <folder-name>")
         sys.exit(1)
-
     search_files_for_tags(sys.argv[1])
