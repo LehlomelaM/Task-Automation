@@ -11,4 +11,4 @@ auto_commit.sh .
 
 # moves Notable markdown files to folders based on tags
 ./move_files_to_folders.py $NOTES
-# auto_commit.sh $NOTES/Notes/
+auto_commit.sh $NOTES/Notes/
